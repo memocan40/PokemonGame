@@ -37,7 +37,7 @@ export default function Search(){
     <option value="Type">Type</option>
   </select>
   <br></br>
-  <Link to={result}><input className="Items" onClick={Clickhandler} type="submit" value="Submit"  ></input></Link>
+  <Link to={result} onMouseEnter={Clickhandler}><input className="Items"  type="submit" value="Submit"  ></input></Link>
     </div>
     
     

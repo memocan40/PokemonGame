@@ -30,4 +30,6 @@
 .Items{
   border-radius:5px;
   box-shadow:2px 2px 2px 2px rgba(34, 33, 33, 0.445);
+  padding:1px;
+  margin-right:5px;
 }
