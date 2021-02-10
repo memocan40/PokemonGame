@@ -28,5 +28,6 @@
 }
 
 .Items{
-  border-radius:10px;
+  border-radius:5px;
+  box-shadow:2px 2px 2px 2px rgba(34, 33, 33, 0.445);
 }
