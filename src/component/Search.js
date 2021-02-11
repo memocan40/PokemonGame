@@ -1,6 +1,6 @@
 import{Link}from "react-router-dom";
 import{useState}from"react";
-import Pokemon from "../views/AllPokemon";
+//import Pokemon from "../views/AllPokemon";
 
 export default function Search(){
     
