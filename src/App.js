@@ -1,4 +1,5 @@
 //import { useState } from "react";
+import axios from "axios";
 import "./App.css";
 import {Switch,Route}from "react-router-dom";
 import Pokemon from "./views/AllPokemon";
@@ -7,7 +8,7 @@ import PokemonByIDByInfo from "./views/PokemonByIDByInfo";
 import Search from "./component/Search";
 
 function App() {
- 
+ //axios.get("https://pokemongame-backend.herokuapp.com/pokemons").then((res)=>{console.log(res.data)});
   
   return (
     <div className="App">
