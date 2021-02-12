@@ -1,5 +1,3 @@
-export default function PokemonyByIDByInfo(){
-    return(
-        <div></div>
-    )
+export default function PokemonyByIDByInfo() {
+  return <div></div>;
 }

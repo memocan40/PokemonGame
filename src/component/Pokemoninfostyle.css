@@ -1,14 +1,8 @@
-.card{
-    display:flex;
-    justify-content:space-around;
-    margin-right:500px;
-    margin-top:30px;
-    background-color:rgba(0, 0, 0, 0.411);
-    border-radius:15px;
-
-    
-    
+.card {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 500px;
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.411);
+  border-radius: 15px;
 }
-
-
-
