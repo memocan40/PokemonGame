@@ -11,7 +11,7 @@ export default function Pokemon({name , type,base }){
        <div>
           { Pokemonlist.map((pokemons,index)=>{
                return(<div key={index}>
-             <Pokemoninfo  name={pokemons.name}/>
+             <Pokemoninfo  name={pokemons.name} base={pokemons.base} type={pokemons.type}/>
                </div>
                    
                )
