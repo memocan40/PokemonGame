@@ -1,11 +1,11 @@
 
-
+import "./Pokemoninfostyle.css";
 
 export default function Poke({name,base,type,id}){
 
    return(
     <div>
-    <card>
+    <div className="card">
     <h3>Name:</h3>
     <p>En:{name.english}<br></br>
       Jap:{name.japanese}<br></br>
@@ -16,13 +16,13 @@ export default function Poke({name,base,type,id}){
       <p>{type[0]}</p>
 
     <h3>Base</h3>
-    <p>HP:{base.HP}</p>
-    <p>Attack:{base.Attack}</p>
-    <p>Defense:{base.Defense}</p>
-    <p>Sp.Attack:{base.["Sp. Attack"]}</p>
-    <p>Sp.Defense:{base.["Sp. Defense"]}</p>
-    <p>Speed  : {base.Speed}</p>
-   </card>
+    <p>HP:{base.HP}<br></br>
+    Attack:{base.Attack}<br></br>
+    Defense:{base.Defense}<br></br>
+    Sp.Attack:{base.["Sp. Attack"]}<br></br>
+    Sp.Defense:{base.["Sp. Defense"]}<br></br>
+    Speed  : {base.Speed}</p>
+   </div>
     
 
     </div>
