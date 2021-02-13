@@ -1,36 +1,32 @@
 .App {
-  
   background-image: url(https://images.wallpapersden.com/image/download/pokemon-pikachu-art_a25tbW6UmZqaraWkpJRmbmdlrWZlbWU.jpg);
-  background-size:cover;
-  height:100vh;
-  margin:0px;
-  padding:0px;
-  overflow:scroll;
-  
-
+  background-size: cover;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  overflow: scroll;
 }
 
-.Dropdown{
-  display:flex;
-  justify-content:center;
-  border-radius:20px;
-  
-}
-.Input{
-  margin-right:10px;
-  border-radius:20px;
-}
-
-.Button{
-  display:flex;
+.Dropdown {
+  display: flex;
   justify-content: center;
-  margin:10px;
-  border-radius:20px;
+  border-radius: 20px;
+}
+.Input {
+  margin-right: 10px;
+  border-radius: 20px;
 }
 
-.Items{
-  border-radius:5px;
-  box-shadow:2px 2px 2px 2px rgba(34, 33, 33, 0.445);
-  padding:1px;
-  margin-right:5px;
+.Button {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.Items {
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgba(34, 33, 33, 0.445);
+  padding: 1px;
+  margin-right: 5px;
 }
