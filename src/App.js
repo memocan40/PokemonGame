@@ -1,12 +1,10 @@
-//import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
+import { useState } from "react";
 import Pokemon from "./views/AllPokemon";
 import PokemonID from "./views/PokemonByID";
 import PokemonByIDByInfo from "./views/PokemonByIDByInfo";
-import { useState } from "react";
 
 function App() {
   axios
@@ -48,7 +46,7 @@ function App() {
               }}
             />
           </div>
-          <label for="Dropdown">Choose a Info:</label>
+          <label htmlFor="Dropdown">Choose a Info:</label>
           <select
             name="Dropdown"
             id="dropdown"

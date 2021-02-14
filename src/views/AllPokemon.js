@@ -1,14 +1,21 @@
-import axios from "axios";
+// import axios from "axios";
+import Api from "../api";
+
 import { useState } from "react";
 import Pokemoninfo from "../component/Pokemoninfo";
 
 export default function Pokemon({ name, type, base }) {
   let [Pokemonlist, setPokemonlist] = useState([]);
-  axios
-    .get("https://pokemongame-backend.herokuapp.com/pokemons")
-    .then((res) => {
-      setPokemonlist(res.data.data);
-    });
+  // axios
+  //   .get("https://pokemongame-backend.herokuapp.com/pokemons")
+  //   .then((res) => {
+  //     setPokemonlist(res.data.data);
+  //   });
+
+  Api.getAll().then((res) => {
+    setPokemonlist(res.data.data);
+  });
+
   console.log(Pokemonlist);
   return (
     <div>
