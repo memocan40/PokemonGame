@@ -1,35 +1,27 @@
-// import axios from "axios";
 import Api from "../api";
+import { useState, useEffect } from "react";
+import PokemonListing from "../component/PokemonListing";
 
-import { useState } from "react";
-import Pokemoninfo from "../component/Pokemoninfo";
+export default function AllPokemon() {
+  let [pokemonlist, setPokemonlist] = useState([]);
 
-export default function Pokemon({ name, type, base }) {
-  let [Pokemonlist, setPokemonlist] = useState([]);
-  // axios
-  //   .get("https://pokemongame-backend.herokuapp.com/pokemons")
-  //   .then((res) => {
-  //     setPokemonlist(res.data.data);
-  //   });
+  useEffect(() => {
+    // Api.getAll("/")
+    //   .then((response) => setPokemonlist(response.data.data))
+    //   .catch((error) => console.log("There was an error with your request"));
+    const fetchPokemons = async () => {
+      try {
+        const res = await Api.getAll("/");
+        setPokemonlist(res.data.data);
+      } catch (err) {}
+    };
+    fetchPokemons();
+  }, []);
 
-  Api.getAll().then((res) => {
-    setPokemonlist(res.data.data);
-  });
-
-  console.log(Pokemonlist);
+  console.log(pokemonlist);
   return (
     <div>
-      {Pokemonlist.map((pokemons, index) => {
-        return (
-          <div key={index}>
-            <Pokemoninfo
-              name={pokemons.name}
-              base={pokemons.base}
-              type={pokemons.type}
-            />
-          </div>
-        );
-      })}
+      <PokemonListing pokemonData={pokemonlist} />
     </div>
   );
 }
