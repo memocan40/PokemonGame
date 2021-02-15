@@ -1,18 +1,28 @@
-import axios from "axios";
-import { useState } from "react";
-import Pokemoninfo from "../component/Pokemoninfo";
+import Api from "../api";
+import { Fragment, useState, useEffect } from "react";
+import PokemonListing from "../component/PokemonListing";
 
-export default function PokemonID({ ID }) {
-  let [IDs, SetIDs] = useState();
-  axios
-    .get("https://pokemongame-backend.herokuapp.com/pokemons")
-    .then((res) => {
-      SetIDs(res.data.data[4]);
-    });
-  console.log(IDs);
+import { useParams } from "react-router-dom";
+
+export default function PokeById() {
+  const [poke, setPoke] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    if (id !== "") {
+      const toArray = [];
+      Api.getPokeById(id)
+        .then((res) => {
+          toArray.push(res.data.data);
+          setPoke(toArray);
+        })
+        .catch((error) => console.error(error));
+    }
+  }, [id]);
+
   return (
-    <div>
-      <Pokemoninfo name={IDs} base={IDs} type={IDs} />
-    </div>
+    <Fragment>
+      <PokemonListing pokemonData={poke} />
+    </Fragment>
   );
 }

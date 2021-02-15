@@ -4,15 +4,19 @@ export default function Poke({ name, base, type, id }) {
   return (
     <div>
       <div className="card">
+        <p>
+          Id: {id}
+          <br />
+        </p>
         <h3>Name:</h3>
         <p>
           En:{name.english}
-          <br></br>
+          {/* <br></br>
           Jap:{name.japanese}
           <br></br>
           Ch:{name.chinese}
           <br></br>
-          Fr:{name.french}
+          Fr:{name.french} */}
         </p>
 
         <h3>Type</h3>
