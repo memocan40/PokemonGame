@@ -1,6 +1,6 @@
 import "./Pokemoninfostyle.css";
 
-export default function Poke({ name, base, type, id }) {
+export default function Pokemoninfo({ name, base, type, id }) {
   return (
     <div>
       <div className="card">
