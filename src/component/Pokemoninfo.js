@@ -7,6 +7,10 @@ export default function Pokemoninfo({ name, base, type, id }) {
         <p>
           Id: {id}
           <br />
+          <img
+            // src={`https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${id}.png?raw=true`}
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+          />
         </p>
         <h3>Name:</h3>
         <p>

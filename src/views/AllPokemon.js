@@ -4,15 +4,15 @@ import PokemonListing from "../component/PokemonListing";
 
 export default function AllPokemon() {
   let [pokemonlist, setPokemonlist] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Api.getAll("/")
-    //   .then((response) => setPokemonlist(response.data.data))
-    //   .catch((error) => console.log("There was an error with your request"));
     const fetchPokemons = async () => {
+      setLoading(true);
       try {
         const res = await Api.getAll("/");
         setPokemonlist(res.data.data);
+        setLoading(false);
       } catch (err) {}
     };
     fetchPokemons();
@@ -21,7 +21,7 @@ export default function AllPokemon() {
   console.log(pokemonlist);
   return (
     <div>
-      <PokemonListing pokemonData={pokemonlist} />
+      <PokemonListing pokemonData={pokemonlist} loading={loading} />
     </div>
   );
 }
