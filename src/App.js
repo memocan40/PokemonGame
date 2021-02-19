@@ -4,6 +4,7 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 import ButtonAllPoke from "./component/ButtonAllPoke";
 import Search from "./component/Search";
 // import views:
+import Fightview from "./views/Fightview";
 import AllPokemon from "./views/AllPokemon";
 import PokemonID from "./views/PokemonByID";
 import PokemonByIDByInfo from "./views/PokemonByIDByInfo";
@@ -15,6 +16,9 @@ function App() {
         <ButtonAllPoke />
         <Search />
         <Switch>
+         <Route path="/PokemonFight">
+            <Fightview/>
+          </Route>
           <Route path="/AllPokemon">
             <AllPokemon />
           </Route>
@@ -24,7 +28,7 @@ function App() {
           <Route path="/:id">
             <PokemonID />
           </Route>
-          <Route path="/"></Route>
+         
         </Switch>
       </BrowserRouter>
     </div>
