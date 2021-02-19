@@ -1,10 +1,20 @@
 .Fightfield{
+    display:flex;
+
     
     padding-top:10em;
-    width:40em;
+    width:70em;
     height:30em;
     margin:auto;
     margin-top:10em;
     background-color:rgba(0, 0, 0, 0.295);
     border-radius: 10px;
+}
+.Inputs{
+    display: flex;
+    justify-content: center;
+}
+.Firstpoke{
+    
+    
 }

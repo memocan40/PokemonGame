@@ -7,8 +7,10 @@ import PokemonListing from "../component/PokemonListing";
 
 
 export default function Fightview(){
-    let[Poke1,setPoke1]=useState();
-    let[Poke2,setPoke2]=useState();
+    let[Poke1,setPoke1]=useState([]);
+    let[Poke2,setPoke2]=useState([]);
+    let[res,setRes]=useState();
+    let[res2,setRes2]=useState();
 
 
       const { id } = useParams();
@@ -19,7 +21,8 @@ export default function Fightview(){
       Api.getPokeById(1)
         .then((res) => {
           toArray.push(res.data.data);
-          setPoke1(toArray);
+          setRes(toArray);
+          setRes2(toArray);
         
         })
         .catch((error) => console.error(error));
@@ -44,6 +47,14 @@ export default function Fightview(){
         }
         
     }
+
+    const butt=()=>{
+        setRes(Poke1)
+    }
+
+    const butt2=()=>{
+        setRes2(Poke2)
+    }
     
     const secondpokemon=(event)=>{
         setPoke2(event.target.value);
@@ -63,11 +74,13 @@ export default function Fightview(){
     return(
         <div className="Fightfield">
         <div className="inputs">
-            <input type="text" placeholder="Choose your Pokemon!" onChange={firstpokemon}></input>
-            <input type="text" placeholder="Choose your Pokemon!" onChange={secondpokemon}></input>
+            <input type="text" placeholder="Choose your Pokemon!" onChange={firstpokemon}></input><button onClick={butt}>Click</button>
+            <input type="text" placeholder="Choose your Pokemon!" onChange={secondpokemon}></input><button onClick={butt2}>Click</button>
         </div>
-            <div>
-               <PokemonListing pokemonData={Poke1}/>
+            <div className="Firstpoke">
+               <PokemonListing pokemonData={res}/>
+                        <h1>VS</h1>
+                <PokemonListing pokemonData={res2}/>
             </div>
         </div>
     )
