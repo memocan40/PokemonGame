@@ -29,6 +29,16 @@ export default function Fightview(){
     
   }, []);
 
+ if(res){
+  let poke1sum;
+  let poke2sum;
+  for(const stat in res[0].base){
+    poke1sum+=res[0].base[stat];
+    poke2sum+=res2[0].base[stat];
+
+  }
+  }
+if(res){console.log(poke1sum,poke2sum);}
 
     const firstpokemon=(event)=>{
         setPoke1(event.target.value);
@@ -85,6 +95,7 @@ export default function Fightview(){
                         <div>
                 <PokemonListing pokemonData={res2}/>
                 </div>
+                
             </div>
         </div>
     )
