@@ -79,8 +79,12 @@ export default function Fightview(){
         </div>
             <div className="Firstpoke">
                <PokemonListing pokemonData={res}/>
-                        <h1>VS</h1>
+               <div>
+                        <h1 className="VS">VS</h1>
+                        </div>
+                        <div>
                 <PokemonListing pokemonData={res2}/>
+                </div>
             </div>
         </div>
     )

@@ -1,20 +1,29 @@
 .Fightfield{
-    display:flex;
 
     
     padding-top:10em;
-    width:70em;
+    width:100em;
     height:30em;
     margin:auto;
+    margin-left:2em;
     margin-top:10em;
-    background-color:rgba(0, 0, 0, 0.295);
+    background-image:url("https://3images.cgames.de/images/gsgp/226/pok%C3%A9mon-basketbolz-baccer_6063212.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
     border-radius: 10px;
 }
-.Inputs{
-    display: flex;
-    justify-content: center;
+.inputs{
+    margin-left:30em;
+    
+}
+
+.VS{
+    margin-left:3em;
 }
 .Firstpoke{
+    display:flex;
+    flex-direction:row;
+    
     
     
 }
