@@ -74,8 +74,8 @@ export default function Fightview(){
     return(
         <div className="Fightfield">
         <div className="inputs">
-            <input type="text" placeholder="Choose your Pokemon!" onChange={firstpokemon}></input><button onClick={butt}>Click</button>
-            <input type="text" placeholder="Choose your Pokemon!" onChange={secondpokemon}></input><button onClick={butt2}>Click</button>
+            <input type="number" placeholder="Choose your Pokemon!" onChange={firstpokemon}></input><button onClick={butt}>Click</button>
+            <input type="number" placeholder="Choose your Pokemon!" onChange={secondpokemon}></input><button onClick={butt2}>Click</button>
         </div>
             <div className="Firstpoke">
                <PokemonListing pokemonData={res}/>
