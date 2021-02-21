@@ -20,8 +20,12 @@ export default function AllPokemon() {
 
   console.log(pokemonlist);
   return (
-    <div>
-      <PokemonListing pokemonData={pokemonlist} loading={loading} />
+    <div className="card-grid">
+      <PokemonListing
+        className="card"
+        pokemonData={pokemonlist}
+        loading={loading}
+      />
     </div>
   );
 }

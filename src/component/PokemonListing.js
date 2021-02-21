@@ -1,16 +1,17 @@
 // Import component
+import { Fragment } from "react";
 import Pokemoninfo from "./Pokemoninfo";
 
-export default function PokemonListing({ pokemonData, loading }) {
+export default function PokemonListing({ className, pokemonData, loading }) {
   if (loading) {
     return <h2>Loading ...</h2>;
   }
   return (
-    <div className="">
+    <Fragment>
       {pokemonData &&
         pokemonData.map((pokemon, index) => {
           return (
-            <div key={index}>
+            <div className={className} key={index}>
               <Pokemoninfo
                 name={pokemon.name}
                 base={pokemon.base}
@@ -20,6 +21,6 @@ export default function PokemonListing({ pokemonData, loading }) {
             </div>
           );
         })}
-    </div>
+    </Fragment>
   );
 }

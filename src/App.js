@@ -1,5 +1,5 @@
 import "./App.css";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 // import components:
 import ButtonAllPoke from "./component/ButtonAllPoke";
 import Search from "./component/Search";
@@ -12,12 +12,12 @@ import PokemonByIDByInfo from "./views/PokemonByIDByInfo";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <ButtonAllPoke />
-        <Search />
+      <ButtonAllPoke />
+      <Search />
+      <div className="mainContainer">
         <Switch>
-         <Route path="/PokemonFight">
-            <Fightview/>
+          <Route path="/PokemonFight">
+            <Fightview />
           </Route>
           <Route path="/AllPokemon">
             <AllPokemon />
@@ -28,9 +28,8 @@ function App() {
           <Route path="/:id">
             <PokemonID />
           </Route>
-         
         </Switch>
-      </BrowserRouter>
+      </div>
     </div>
   );
 }

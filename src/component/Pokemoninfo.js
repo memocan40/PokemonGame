@@ -1,46 +1,38 @@
+import { Fragment } from "react";
 import "./Pokemoninfostyle.css";
 
 export default function Pokemoninfo({ name, base, type, id }) {
   return (
-    <div>
-      <div className="card">
-        <p>
-          Id: {id}
-          <br />
-          <img
-            // src={`https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${id}.png?raw=true`}
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
-          />
-        </p>
-        <h3>Name:</h3>
-        <p>
-          En:{name.english}
-          {/* <br></br>
-          Jap:{name.japanese}
-          <br></br>
-          Ch:{name.chinese}
-          <br></br>
-          Fr:{name.french} */}
-        </p>
-
-        <h3>Type</h3>
-        <p>{type[0]}</p>
-
-        <h3>Base</h3>
-        <p>
-          HP:{base.HP}
-          <br></br>
-          Attack:{base.Attack}
-          <br></br>
-          Defense:{base.Defense}
-          <br></br>
-          Sp.Attack:{base["Sp. Attack"]}
-          <br></br>
-          Sp.Defense:{base["Sp. Defense"]}
-          <br></br>
-          Speed : {base.Speed}
-        </p>
+    <Fragment>
+      <div className="card__image">
+        <h3>{name.english}</h3>
+        <img
+          // src={`https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${id}.png?raw=true`}
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+          alt={`Pokemon Id ${id} loading ...`}
+        />
       </div>
-    </div>
+      {/* <ul>
+        <li>En: {name.english} </li>
+        <li>Jap: {name.japanese}</li>
+        <li>Ch: {name.chinese}</li>
+        <li>Fr: {name.french} </li>
+      </ul> */}
+      <div className="text-align-center card__typeSection">
+        {type[0]} {type[1]}
+      </div>
+      <hr></hr>
+      <div className="card__baseSection">
+        <span className="bold">Base: </span>
+        <ul className="card__baseList">
+          <li>HP: {base.HP}</li>
+          <li>Attack: {base.Attack}</li>
+          <li>Defense: {base.Defense}</li>
+          <li>Sp. Attack: {base["Sp. Attack"]}</li>
+          <li> Sp. Defense: {base["Sp. Defense"]}</li>
+          <li>Speed : {base.Speed}</li>
+        </ul>
+      </div>
+    </Fragment>
   );
 }
