@@ -1,29 +1,57 @@
-.Fightfield{
-
-    
-    padding-top:10em;
-    width:100em;
-    height:30em;
-    margin:auto;
-    margin-left:2em;
-    margin-top:10em;
-    background-image:url("https://3images.cgames.de/images/gsgp/226/pok%C3%A9mon-basketbolz-baccer_6063212.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-}
-.inputs{
-    margin-left:30em;
-    
+.fightview__Container {
+  width: 55vw;
+  min-height: 65vh;
+  padding: 3rem;
+  display: flex;
+  /* margin: auto; */
+  margin-left: 3rem;
+  margin-top: 6rem;
+  background-image: url("https://3images.cgames.de/images/gsgp/226/pok%C3%A9mon-basketbolz-baccer_6063212.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border: 5px solid rgb(88, 88, 88);
+  align-items: center;
 }
 
-.VS{
-    margin-left:3em;
+.fightview__sectionContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
-.Firstpoke{
-    display:flex;
-    flex-direction:row;
-    
-    
-    
+.fightview__sectionContainer > div {
+  flex: 0 100%;
+}
+
+.fightview__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.fightview__section > div {
+  flex: 0 11rem;
+}
+.fightview__sectionSelectPokes {
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
+.fightview__sectionCards {
+  justify-content: space-around;
+}
+
+.sectionCardsItem {
+  min-width: 12rem;
+}
+.fight__ButtonContainer {
+  text-align: center;
+  color: white;
+}
+.fight__ButtonContainer h2 {
+  margin-top: 10rem;
 }

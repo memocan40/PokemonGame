@@ -55,19 +55,15 @@ export default function Search() {
         onMouseEnter={Clickhandler}
         onClick={() => setInputValue("")}
       >
-        <input
-          className="Items pointer"
-          type="submit"
-          value="Search by ID"
-        ></input>
+        <button className="Items pointer" type="submit">
+          Search by ID
+        </button>
       </Link>
 
       <Link to="/PokemonFight" onMouseEnter={Clickhandler}>
-        <input
-          className="Items pointer"
-          type="submit"
-          value="Got To Fight Area"
-        ></input>
+        <button className="Items pointer" type="submit">
+          Go To Fight Area
+        </button>
       </Link>
     </div>
   );

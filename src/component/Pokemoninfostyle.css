@@ -43,8 +43,14 @@
 /* additional styling depending on View*/
 .card.card__perIdView {
   min-width: 18rem;
+  /* max-width: 18rem; */
 }
 
 .card__fightView {
-  display: flex;
+  border: 2px solid red;
+  width: 15rem;
+  /* min-width: 18rem;
+  max-width: 18rem; */
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
 }
