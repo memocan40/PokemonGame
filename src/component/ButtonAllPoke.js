@@ -4,7 +4,7 @@ export default function ButtonAllPoke() {
   return (
     <div className="Button">
       <Link to="/AllPokemon">
-        <button className="Items">Get All</button>
+        <button className="Items pointer">Get All</button>
       </Link>
     </div>
   );
