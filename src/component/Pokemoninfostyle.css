@@ -1,8 +1,50 @@
-.card {
+.card-grid {
+  max-width: 50vw;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  margin-right: 400px;
+  margin-left: 2rem;
+}
+.card-grid > div {
+  flex: 0 30%;
+}
+
+.card {
+  padding: 15px;
+  text-align: left;
   margin-top: 30px;
-  background-color: rgba(0, 0, 0, 0.411);
+  /* background-color: rgba(0, 0, 0, 0.9); */
+  background-color: white;
+  color: #666;
+  border: 1px solid rgba(0, 0, 0, 0.9);
   border-radius: 15px;
+  width: 100%;
+  min-width: 12rem;
+}
+
+.card__typeSection {
+  padding-bottom: 5px;
+}
+.card__baseSection {
+  margin-top: 10px;
+}
+.card__baseList {
+  list-style-type: none;
+  margin-top: 2px;
+  padding-left: 5px;
+}
+
+.card__image {
+  text-align: center;
+  margin-bottom: 0px;
+  /* border-bottom: 2px solid #666; */
+}
+
+/* additional styling depending on View*/
+.card.card__perIdView {
+  min-width: 18rem;
+}
+
+.card__fightView {
+  display: flex;
 }

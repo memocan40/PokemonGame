@@ -1,9 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .App {
   background-image: url("https://images.wallpapersden.com/image/download/pokemon-pikachu-art_a25tbW6UmZqaraWkpJRmbmdlrWZlbWU.jpg");
+  /* background-image: url("./wallpaper.jpg"); */
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
-  margin: 0px;
-  padding: 0px;
   overflow: scroll;
 }
 
@@ -29,4 +35,20 @@
   box-shadow: 2px 2px 2px 2px rgba(34, 33, 33, 0.445);
   padding: 1px;
   margin-right: 5px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+.bold {
+  font-weight: bold;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-left {
+  text-align: left;
+}
+.text-align-right {
+  text-align: right;
 }

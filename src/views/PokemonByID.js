@@ -22,7 +22,9 @@ export default function PokeById() {
 
   return (
     <Fragment>
-      <PokemonListing pokemonData={poke} />
+      <div className="card-grid .card-grid__fightView">
+        <PokemonListing pokemonData={poke} className="card card__perIdView" />
+      </div>
     </Fragment>
   );
 }
