@@ -9,3 +9,7 @@ This application will be able to return all the pokemon names in a list and incl
 
 - **/pokemon/:id** -> view pokemon with its name, type and base
 - **/pokemon/:id/:info** -> detailed view with only the name, the type or the base data of a pokemon depending on its id
+
+---
+
+[To be continued ...](https://github.com/memocan40/PokemonGame/blob/38f51c7380858124d5e6baab986aec3905afa517/refactor.md)
