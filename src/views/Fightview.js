@@ -3,13 +3,23 @@ import "./Fightview.css";
 import Api from "../api";
 import { useState, useEffect } from "react";
 import PokemonListing from "../component/PokemonListing";
+// import Modal from "react-modal";
+import ModalWinner from "../component/Modal";
 
 export default function Fightview() {
+  const rand = (n, m = 0) => (Math.random() * (m - n + 1) + n) | 0;
+
+  const [{ name, points, id }, setFightWinner] = useState({
+    name: "",
+    points: "",
+    id: "",
+  });
+  const [modalOpen, setModalOpen] = useState(false);
+
   let [Poke1, setPoke1] = useState([]);
   let [Poke2, setPoke2] = useState([]);
   let [res, setRes] = useState();
   let [res2, setRes2] = useState();
-  const rand = (n, m = 0) => (Math.random() * (m - n + 1) + n) | 0;
 
   useEffect(() => {
     const toArray = [];
@@ -22,24 +32,35 @@ export default function Fightview() {
       .catch((error) => console.error(error));
   }, []);
 
-  if (res && res2) {
-    function sum(pokeValues) {
-      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
-      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
-      return Object.keys(pokeValues).reduce(
-        (sum, key) => sum + (pokeValues[key] || 0),
-        0
-      );
-    }
-    let poke1sum = rand(rand(100), sum(res[0].base));
-    let poke2sum = rand(rand(100), sum(res2[0].base));
+  const activateFight = () => {
+    if (res && res2) {
+      function sum(pokeValues) {
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+        return Object.keys(pokeValues).reduce(
+          (sum, key) => sum + (pokeValues[key] || 0),
+          0
+        );
+      }
+      let poke1sum = rand(rand(100), sum(res[0].base));
+      let poke2sum = rand(rand(100), sum(res2[0].base));
 
-    var winner =
       poke1sum >= poke2sum
-        ? `Winner is ${res[0].name.english}`
-        : `Winner is ${res2[0].name.english}`;
-  }
-
+        ? setFightWinner({
+            name: res[0].name.english,
+            points: poke1sum,
+            id: res[0].id,
+          })
+        : setFightWinner({
+            name: res2[0].name.english,
+            points: poke2sum,
+            id: res2[0].id,
+          });
+    }
+    if (name && id) {
+      setModalOpen(true);
+    }
+  };
   // ------------------------------------------------------
   const firstpokemon = (event) => {
     setPoke1(event.target.value);
@@ -105,10 +126,21 @@ export default function Fightview() {
           />
           <div>
             <div className="sectionCardsItem fight__ButtonContainer">
-              <button className="Items pointer fight__Button" type="submit">
+              <button
+                className="Items pointer fight__Button"
+                type="submit"
+                onClick={activateFight}
+              >
                 START FIGHT
               </button>
-              <h2 className="fightview__winner">{winner}</h2>
+
+              <ModalWinner
+                name={name}
+                points={points}
+                id={id}
+                setModalOpen={setModalOpen}
+                open={modalOpen}
+              />
             </div>
           </div>
           <PokemonListing
