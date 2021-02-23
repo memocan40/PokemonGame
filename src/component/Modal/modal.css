@@ -1,0 +1,60 @@
+.ReactModal__Content {
+  /* overwrite default styles */
+  background: rgba(0, 0, 0, 0.6) !important;
+  top: 20% !important;
+  border-radius: 15px !important;
+  /* add custom styles */
+  width: 56%;
+  height: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.modal__container {
+  background: rgb(88, 88, 88);
+  border-radius: 15px;
+  background: white;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2f2f2f;
+  /* background: #fe4b32; */
+  color: #dbd9d9;
+  color: white;
+  padding: 1rem;
+  border-radius: 15px 15px 0px 0px;
+}
+.modal__btn-cancel {
+  cursor: pointer;
+}
+.modal__header span {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal__body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 4em;
+  color: #666;
+  padding: 2rem;
+}
+.modal__body img {
+  min-width: 12rem;
+  border-bottom: 2px solid rgb(88, 88, 88);
+  margin-bottom: 0.2rem;
+}
+.modal__body p {
+  font-size: 1.8rem;
+  color: #fe5858;
+  color: #666;
+  font-weight: bold;
+}
