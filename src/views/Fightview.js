@@ -3,7 +3,6 @@ import "./Fightview.css";
 import Api from "../api";
 import { useState, useEffect } from "react";
 import PokemonListing from "../component/PokemonListing";
-// import Modal from "react-modal";
 import ModalWinner from "../component/Modal";
 
 export default function Fightview() {
@@ -99,24 +98,30 @@ export default function Fightview() {
     <div className="fightview__Container">
       <div className="fightview__sectionContainer">
         <div className="fightview__section fightview__sectionSelectPokes">
-          <div>
+          <div className="fightview__inputContainer">
             <input
+              className="Items"
               min="1"
               type="number"
-              placeholder="Choose your Pokemon!"
+              placeholder="1"
               onChange={firstpokemon}
             ></input>
-            <button onClick={butt}>Click</button>
+            <button className="Items" onClick={butt}>
+              Choose Pokemon
+            </button>
           </div>
           <h3 className="VS">VERSUS</h3>
-          <div>
+          <div className="fightview__inputContainer">
             <input
+              className="Items"
               min="1"
               type="number"
-              placeholder="Choose your Pokemon!"
+              placeholder="1"
               onChange={secondpokemon}
             ></input>
-            <button onClick={butt2}>Click</button>
+            <button className="Items" onClick={butt2}>
+              Choose Pokemon
+            </button>
           </div>
         </div>
         <div className="fightview__section fightview__sectionCards">
@@ -131,7 +136,7 @@ export default function Fightview() {
                 type="submit"
                 onClick={activateFight}
               >
-                START FIGHT
+                FIGHT
               </button>
 
               <ModalWinner

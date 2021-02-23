@@ -3,7 +3,6 @@
   min-height: 65vh;
   padding: 3rem;
   display: flex;
-  /* margin: auto; */
   margin-left: 3rem;
   margin-top: 6rem;
   background-image: url("https://3images.cgames.de/images/gsgp/226/pok%C3%A9mon-basketbolz-baccer_6063212.jpg");
@@ -32,26 +31,50 @@
   width: 100%;
   flex-wrap: wrap;
 }
-.fightview__section > div {
-  flex: 0 11rem;
-}
+/* .fightview__section > div {
+  flex: 0 15rem;
+} */
 .fightview__sectionSelectPokes {
   align-items: center;
   justify-content: space-around;
   color: white;
 }
-
+.fightview__inputContainer {
+  display: flex;
+}
+.fightview__inputContainer input {
+  max-width: 3rem;
+  margin-right: 0.5rem;
+}
 .fightview__sectionCards {
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .sectionCardsItem {
   min-width: 12rem;
+  max-width: 15rem;
+  flex: 1;
 }
 .fight__ButtonContainer {
-  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 1rem;
   color: white;
 }
-.fight__ButtonContainer h2 {
-  margin-top: 10rem;
+.fight__ButtonContainer button {
+  height: 15rem;
+  width: 11rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  padding: 1rem;
+  outline: 0;
+  background: black;
+  background: rgba(0, 0, 0, 0.95);
+  color: white;
+  border: 2px solid red;
+  /* border: 2px solid rgb(88, 88, 88); */
+  font-weight: bold;
+  margin: 0.2rem 0rem;
 }
