@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "https://pokemongame-backend.herokuapp.com/pokemons";
+const url = "https://backend-pokemon-fight-api.herokuapp.com/pokemons";
 
 const Api = {
   getAll: () => axios.get(url),
